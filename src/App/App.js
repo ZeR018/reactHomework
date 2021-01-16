@@ -1,11 +1,13 @@
-import React from 'react'
+import { Calc } from '../Calc'
+
 
 const App = () => {
+  
   return (
     <div>
-      App
+      <Calc />
     </div>
-  );
+  )
 }
 
 export default App;
