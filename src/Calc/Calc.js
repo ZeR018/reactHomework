@@ -1,34 +1,50 @@
 import { useState } from 'react'
+import styles from './Calc.module.css'
 
 const Calc = () => {
 
   //state
   const [first, setFirst] = useState("");
   const [second, setSecond] = useState("");
-  const [sum, setSum] = useState("");
+  const [res, setRes] = useState("");
 
   //functions
-  const getSum = () => setSum(+first + +second);
+  const getSum = () => setRes(+first + +second);
+  const getSub = () => setRes(+first - +second);
+  const getMulti = () => setRes(+first * +second);
+  const getDev = () => setRes(+first / +second);
   const clear = () => {
-    setSum("");
+    setRes("");
     setFirst("");
     setSecond("");
   }
 
   return (
-    <div>
-      
-      <div>
-        <input type="number" value={first} onChange={(e) => setFirst(e.target.value)}/>
-        <input type="number" value={second} onChange={(e) => setSecond(e.target.value)} />
+    <div className={styles.Calc}>
+      <div className={styles.container}>
+
+        <p className={styles.result}>
+          <b className={styles.b}>
+            {res}
+          </b>
+        </p>
+
+        <div className={styles.inputs}>
+          <input type="number" value={first} className={styles.input} onChange={(e) => setFirst(e.target.value)}/>
+          <input type="number" value={second} className={styles.input} onChange={(e) => setSecond(e.target.value)} />
+        </div>
+
+        <div>
+          <button className={styles.button} onClick={getSum}>Sum</button>
+          <button className={styles.button} onClick={getSub}>Sub</button>
+          <button className={styles.button} onClick={getMulti}>Multiply</button>
+          <button className={styles.button} onClick={getDev}>Divide</button>
+        </div>
+
+        <div>
+          <button className={styles.clear} onClick={clear}>Clear</button>
+        </div>
       </div>
-      <div>
-        <button onClick={getSum}>Sum</button>
-        <button onClick={clear}>Clear</button>
-      </div>
-      <p>
-        Result: {sum}
-      </p>
     </div>
   );
 }
