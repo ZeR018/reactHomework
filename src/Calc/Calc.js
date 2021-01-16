@@ -6,7 +6,7 @@ const Calc = () => {
   //state
   const [first, setFirst] = useState("");
   const [second, setSecond] = useState("");
-  const [res, setRes] = useState("");
+  const [res, setRes] = useState(0);
 
   //functions
   const getSum = () => setRes(+first + +second);
@@ -14,7 +14,7 @@ const Calc = () => {
   const getMulti = () => setRes(+first * +second);
   const getDev = () => setRes(+first / +second);
   const clear = () => {
-    setRes("");
+    setRes(0);
     setFirst("");
     setSecond("");
   }
