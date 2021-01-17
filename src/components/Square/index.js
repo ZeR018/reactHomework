@@ -1,3 +1,3 @@
-import { Square } from "./Calc"
+import { SquareContainer } from './SquareContainer';
 
-export { Square }
+export { SquareContainer };

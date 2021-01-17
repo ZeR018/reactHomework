@@ -1,15 +1,17 @@
-import { Calc } from '../components/Calc'
-import styles from './App.module.css'
-import {Route} from 'react-router-dom';
-
+import { Calc } from '../components/Calc';
+import styles from './App.module.css';
+import { Route } from 'react-router-dom';
+import { SquareContainer } from '../components/Square';
 
 const App = () => {
-  
-  return (
-    <div className={styles.App}>
+	return (
+		<div className={styles.App}>
+			{/*
       <Calc />
-    </div>
-  )
-}
+      */}
+			<SquareContainer />
+		</div>
+	);
+};
 
 export default App;
