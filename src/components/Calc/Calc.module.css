@@ -15,10 +15,11 @@
 	left: 0;
 	background-color:#fafafa;
 	border-radius: 10px;
+	border: 2px solid gray;
 }
 
 .container {
-	padding: 30px;
+	padding: 28px;
 	position: relative;
 }
 

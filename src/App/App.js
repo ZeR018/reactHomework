@@ -1,4 +1,4 @@
-import { Calc } from '../Calc'
+import { Calc } from '../components/Calc'
 import styles from './App.module.css'
 
 
