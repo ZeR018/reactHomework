@@ -11,8 +11,10 @@ const SquareContainer = () => {
 			return;
 		}
 		const { movementX, movementY } = e;
-		setTop(movementY + top);
-		setLeft(movementX + left);
+		const nextLeft = movementX + left;
+		const nextTop = movementY + top;
+		if (nextLeft >= 0 && nextLeft <= 420) setLeft(movementX + left);
+		if (nextTop >= 0 && nextTop <= 420) setTop(movementY + top);
 	}
 
 	return (
