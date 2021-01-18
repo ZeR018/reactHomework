@@ -1,0 +1,13 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.Timer {
+	
+}
+
+.buttons {
+	max-width: 200px;
+}

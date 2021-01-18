@@ -2,6 +2,7 @@ import { Calc } from '../components/Calc';
 import styles from './App.module.css';
 import { Route } from 'react-router-dom';
 import { SquareContainer } from '../components/Square';
+import { TimerWrapper } from '../components/Timer';
 
 const App = () => {
 	return (
@@ -9,7 +10,10 @@ const App = () => {
 			{/*
       <Calc />
       */}
-			<SquareContainer />
+			{/*
+				<SquareContainer />
+			*/}
+			<TimerWrapper />
 		</div>
 	);
 };
