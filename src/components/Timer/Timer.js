@@ -42,9 +42,12 @@ class Timer extends React.Component {
 
 	render() {
 		const { time, timerStarted, result } = this.state;
+
+		let timeStamp = new Date(2021, 0, 0, 0, 0, 0, time * 1000);
+
 		return (
 			<div className={styles.Timer}>
-				<h1>{time}</h1>
+				<h1>{timeStamp.toLocaleTimeString()}</h1>
 
 				<div className={styles.buttons}>
 					<div>
@@ -61,7 +64,8 @@ class Timer extends React.Component {
 
 				<div>
 					{result.map(({ time, id }) => {
-						return <p key={id}>{time}</p>;
+						let t = new Date(2021, 0, 0, 0, 0, 0, time * 1000);
+						return <p key={id}>{t.toLocaleTimeString()}</p>;
 					})}
 				</div>
 			</div>
